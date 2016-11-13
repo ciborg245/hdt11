@@ -10,6 +10,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.stream.Collector;
 
 public class Graph {
 
@@ -27,7 +28,7 @@ public class Graph {
         //Se recorre cada Char de la linea leida
         for (int i = 0; i < line.length(); i++) {
             //Si no es un espacio, se guarda en un string temporal dependiendo si es letra o digito
-            if (line.charAt(i) != ' ') {
+            if (Character.isLetter(line.charAt(i)) || Character.isDigit(line.charAt(i))) {
                 if (Character.isLetter(line.charAt(i)))
                     temp += line.charAt(i);
                 else if (Character.isDigit(line.charAt(i)))
