@@ -121,7 +121,7 @@ public class Graph {
 
         //Se revisan las ciudades intermedias segun el algoritmo de Floyd y se van agregando a un string
         while (floydNodes.get(index1).get(index2) != index1) {
-            s += nodes.get(floydNodes.get(1).get(index1)).toUpperCase().charAt(0) + nodes.get(floydNodes.get(1).get(index1)).substring(1) + " -> ";
+            s += nodes.get(floydNodes.get(index1).get(index2)).toUpperCase().charAt(0) + nodes.get(floydNodes.get(index1).get(index2)).substring(1) + " -> ";
             index1 = floydNodes.get(index1).get(index2);
         }
 
