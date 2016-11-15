@@ -1,3 +1,7 @@
+# UVG - Algoritmos y Estructuras de Datos
+# HDT 11: Implementacion del algoritmo de Floyd con NetworkX
+# Rodrigo Arriaza, Alejandro Chaclan y Sebastian Galindo
+
 import networkx as nx
 #import matplotlib.pyplot as plt
 
@@ -77,4 +81,5 @@ if desea_corregir == "Si":
             last_predecesor = rutaN[0][origen][predecesor]
     print "Esto equivale en km a:"
     print rutaN[1][origen][destino]
-
+    centro = nx.center(G, e=None)
+    print "El centro(s) del grafo es: "+", ".join(centro)
